@@ -40,6 +40,7 @@ router.get('/coupon', async (req, res) => {
     }
     catch (err) {
         console.log('Error in getting from database');
+        res.status(500).json({msg: "Internal Server ERror"});
     }
 })
 
