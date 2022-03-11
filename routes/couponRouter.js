@@ -35,12 +35,12 @@ router.post('/coupon', async (req, res) => {
 router.get('/coupon', async (req, res) => {
     try {
 
-        const coupons = await Coupon.find();
-        res.json(coupons);
+        // const coupons = await Coupon.find();
+        res.json({ working: "working" });
     }
     catch (err) {
         console.log('Error in getting from database');
-        res.status(500).json({msg: "Internal Server ERror"});
+        res.status(500).json({ msg: "Internal Server ERror" });
     }
 })
 
