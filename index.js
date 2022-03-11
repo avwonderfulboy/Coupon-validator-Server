@@ -10,7 +10,7 @@ app.use(express.json())
 //db connection 
 connectToDB();
 
-app.get('/', () => {
+app.get('/', (req, res) => {
     res.status(200).send("Working");
 })
 //routes
