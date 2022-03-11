@@ -9,6 +9,10 @@ app.use(cors());
 app.use(express.json())
 //db connection 
 connectToDB();
+
+app.get('/', () => {
+    res.status(200).send("Working");
+})
 //routes
 app.use('/api', require('./routes/couponRouter'));
 
