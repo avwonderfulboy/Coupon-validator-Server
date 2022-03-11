@@ -35,8 +35,8 @@ router.post('/coupon', async (req, res) => {
 router.get('/coupon', async (req, res) => {
     try {
 
-        // const coupons = await Coupon.find();
-        res.json({ working: "working" });
+        const coupons = await Coupon.find();
+        res.json(coupons);
     }
     catch (err) {
         console.log('Error in getting from database');
