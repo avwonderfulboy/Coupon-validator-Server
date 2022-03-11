@@ -32,7 +32,7 @@ router.post('/coupon', async (req, res) => {
 
 });
 
-router.get('/coupon', async (req, res) => {
+router.get('/coupons', async (req, res) => {
     try {
 
         const coupons = await Coupon.find();

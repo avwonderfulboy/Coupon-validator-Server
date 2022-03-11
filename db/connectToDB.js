@@ -1,7 +1,7 @@
 
 const mongoose = require('mongoose')
 
-const url = process.env.DB;
+const url = process.env.DB || "mongodb+srv://anshumanSingh:vjoQd83a2VFOYCqi@cluster0.tfxuu.mongodb.net/coupon-code?retryWrites=true&w=majority";
 
 const connectionParams={
     useNewUrlParser: true,
