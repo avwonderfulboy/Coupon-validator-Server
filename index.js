@@ -12,14 +12,9 @@ connectToDB();
 
 app.use('/api', require('./routes/couponRouter'));
 
-// app.get('/', (req, res) => {
-//     res.status(200).send("Working");
-// })
-//routes
-
-if (process.env.NODE_ENV == "production") {
-    app.use(express.static("client/build"));
-}
+app.get('/', (req, res) => {
+    res.status(200).send("Working");
+})
 
 
 app.listen(PORT, () => {
