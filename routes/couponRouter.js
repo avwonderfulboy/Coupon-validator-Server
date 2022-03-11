@@ -5,6 +5,10 @@ const Coupon = require('../models/couponSchema');
 
 const router = express.Router();
 
+router.get('/check', (req, res) => {
+    res.send("router working");
+})
+
 // create coupon api: @POST , body:  couponType, minAmt,startDate,endDate
 router.post('/coupon', async (req, res) => {
     try {

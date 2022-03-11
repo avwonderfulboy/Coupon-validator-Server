@@ -10,11 +10,13 @@ app.use(express.json())
 //db connection 
 connectToDB();
 
-app.get('/', (req, res) => {
-    res.status(200).send("Working");
-})
-//routes
 app.use('/api', require('./routes/couponRouter'));
+
+// app.get('/', (req, res) => {
+//     res.status(200).send("Working");
+// })
+//routes
+
 
 app.listen(PORT, () => {
     console.log(`Connection to server http://localhost:${PORT}`);
